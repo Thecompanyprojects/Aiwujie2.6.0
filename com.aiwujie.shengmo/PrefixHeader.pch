@@ -1,0 +1,109 @@
+//
+//  PrefixHeader.pch
+//  com.aiwujie.shengmo
+//
+//  Created by a on 16/12/15.
+//  Copyright © 2016年 a. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WIDTH  [UIScreen mainScreen].bounds.size.width
+
+#define HEIGHT  [UIScreen mainScreen].bounds.size.height
+
+//16进制转rgb颜色的宏定义
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+//软件的版本号设置
+#define VERSION @"V2.1.1"
+//获取设备的系统版本
+#define PHONEVERSION [[UIDevice currentDevice] systemVersion]
+//判断设备是否是iPhone X
+#define ISIPHONEX [UIScreen mainScreen].bounds.size.height == 812 ? 1 : 0
+//判断是否是iPhone p
+#define ISIPHONEPLUS [UIScreen mainScreen].bounds.size.height == 736 ? 1 : 0
+//iPhone X 顶部导航距离
+#define IPHONEXTOPH 88
+//iPhone X 底部触碰区距离
+#define IPHONEXBOTTOMH 34
+//融云客服的id
+#define SERVICE_ID @"KEFU148492045558421"
+//服务器的域名
+//#define URL  @"http://59.110.28.150:888/"
+#define URL  @"http://47.93.194.65:888/"
+//服务器的另一个域名
+#define PICHEADURL  @"http://hao.shengmo.org:888/"
+//微博的key和url
+#define kAppKey         @"2758008921"
+#define kRedirectURI    @"https://api.weibo.com/oauth2/default.html"
+//定义广告栏的比例
+#define ADVERTISEMENT [UIScreen mainScreen].bounds.size.width/3.2
+
+//定义附近和动态处上方的榜单高度
+#define DYANDNERHEIGHT [UIScreen mainScreen].bounds.size.width/4.2
+
+//宽度的比例与5相比
+#define WIDTHRADIO [UIScreen mainScreen].bounds.size.width/320
+
+//高度的比例与5相比
+#define HEIGHTRADIO [UIScreen mainScreen].bounds.size.height/568
+
+//男的图标背景颜色
+#define BOYCOLOR [UIColor colorWithHexString:@"#51c3ff" alpha:1]
+
+//女的图标背景颜色
+#define GIRLECOLOR [UIColor colorWithHexString:@"#f56684" alpha:1]
+
+//cd的图标背景颜色
+#define CDCOLOR [UIColor colorWithHexString:@"#c450d6" alpha:1]
+
+#import "LDAFManager.h"
+
+#import "AFNetworking.h"
+
+#import <RongIMKit/RongIMKit.h>
+
+#import "UIImageView+WebCache.h"
+
+#import "UIButton+WebCache.h"
+
+#import "MJRefresh.h"
+
+#import "MBProgressHUD.h"
+
+#import "XWScanImage.h"
+
+#import "SDCycleScrollView.h"
+
+#import "WXApi.h"
+
+#import "WeiboSDK.h"
+
+#import "UITableView+FDTemplateLayoutCell.h"
+
+#import "UILabel+YBAttributeTextTapAction.h"
+#import "UILabel+Copy.h"
+#import "UIColor+RCColor.h"
+#import "UIViewController+LDViewH.h"
+
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+#import "ImageBrowserViewController.h"
+
+//存储用户的唯一标识uuid
+#import "UICKeyChainStore.h"
+
+//礼物的view
+#import "GifView.h"
+
+//提示类工具alert
+#import "AlertTool.h"
+
+
+#endif /* PrefixHeader_pch */
